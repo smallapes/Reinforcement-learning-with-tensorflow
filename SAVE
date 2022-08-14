@@ -1,4 +1,6 @@
-cd /Users/lls/lls/src/github.com/smallapes/Reinforcement-learning-with-tensorflow
+CURRENT_DIR=$(cd $(dirname $0); pwd)
+echo "current dir: ${CURRENT_DIR}"
+cd $CURRENT_DIR
 git add .
 git commit -am "save"
 git push origin master --force
