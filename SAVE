@@ -1,6 +1,5 @@
 CURRENT_DIR=$(cd $(dirname $0); pwd)
 echo "current dir: ${CURRENT_DIR}"
-echo "current dir: $0"
 cd $CURRENT_DIR
 git add .
 git commit -am "save"
