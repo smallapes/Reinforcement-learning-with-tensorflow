@@ -32,6 +32,13 @@ def update():
             observation_, reward, done = env.step(action)
 
             # RL learn from this transition
+            """
+            Qlearning 是一个 off-policy 的算法, 因为里面的 max action 让 Q table 的更新
+            可以不基于正在经历的经验(可以是现在学习着很久以前的经验,甚至是学习他人的经验). 
+            
+            不过这一次的例子, 我们没有运用到 off-policy, 而是把 Qlearning 用在了 on-policy 上, 也就是现学现卖, 将现在经历的直接当场学习并运用. 
+            https://mofanpy.com/tutorials/machine-learning/reinforcement-learning/tabular-q1
+            """
             RL.learn(str(observation), action, reward, str(observation_))
 
             # swap observation
